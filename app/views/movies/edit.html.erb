@@ -4,10 +4,8 @@
   <p style="color: red;"><%= message %></p>
 <% end %>
 
-<%= form_with(url: movie_path(@the_movie), data: { turbo: false }) do %>
+<%= form_with(url: movie_path(@the_movie), method: :patch, data: { turbo: false }) do %>
   <input name="authenticity_token" value="<%= form_authenticity_token %>" type="hidden">
-  
-  <input name="_method" value="patch" type="hidden">
 
   <div>
     <%= label_tag :title_box, "Title" %>
