@@ -10,11 +10,11 @@
       </div>
 
       <div>
-      <a href="<%= edit_movie_path(@the_movie.id) %>"> Edit movie </a>
+      <a href="<%= edit_movie_path(@the_movie) %>"> Edit movie </a>
       </div>
 
       <div>
-        <a href="<%= movie_path(@the_movie.id) %>" data-turbo-method="delete">
+        <a href="<%= movie_path(@the_movie) %>" data-turbo-method="delete">
           Delete movie
         </a>
       </div>
