@@ -11,7 +11,7 @@ Rails.application.routes.draw do
           
   # READ
   get "/movies" => "movies#index"
-  get "/movies/:id" => "movies#show", as: :details
+  get "/movies/:id" => "movies#show", as: :movie
   
   # UPDATE
   patch "/movies/:id" => "movies#update"
