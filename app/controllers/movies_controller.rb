@@ -2,7 +2,6 @@ class MoviesController < ApplicationController
   def new
     @the_movie = Movie.new
 
-    render "movies/new"
   end
 
   def index
@@ -28,7 +27,6 @@ class MoviesController < ApplicationController
 
     @the_movie = matching_movies.first
 
-    render "movies/show"
   end
 
   def create
@@ -51,7 +49,6 @@ class MoviesController < ApplicationController
 
     @the_movie = matching_movies.first
 
-    render "movies/edit"
   end
 
   def update
