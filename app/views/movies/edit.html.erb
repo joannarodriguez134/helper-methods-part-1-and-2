@@ -4,22 +4,22 @@
   <p style="color: red;"><%= message %></p>
 <% end %>
 
-<%= form_with(url: movie_path(@movie), method: :patch, data: { turbo: false }) do %>
+<%= form_with(model: @movie, method: :patch, data: { turbo: false }) do |form| %>
   <input name="authenticity_token" value="<%= form_authenticity_token %>" type="hidden">
 
   <div>
-    <%= label_tag :title %>
+    <%= form.label :title %>
 
-    <%= text_field_tag "movie[title]", @movie.title, { id: "title" } %>
+    <%= form.text_field :title %>
 
 
   </div>
 
   <div>
-    <%= label_tag :description %>
+    <%= form.label :description %>
 
-     <%= text_area_tag "movie[description]", @movie.description, { id: "description", rows: 3 } %>
+     <%= form.text_area :description, { rows: 3 } %>
   </div>
 
-  <%= button_tag "Update Movie" %>
+  <%= form.button "Update Movie" %>
 <% end %>
